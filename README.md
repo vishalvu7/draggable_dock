@@ -1,16 +1,20 @@
 # dockapp
 
-A new Flutter project.
 
-## Getting Started
+Summary of the Documentation:
+Classes:
 
-This project is a starting point for a Flutter application.
+MyApp: The main application widget that sets up the app's layout and structure.
+Dock: A generic widget that displays a list of draggable items.
+_DockState: The state class for managing the logic and UI of the Dock.
+Fields:
 
-A few resources to get you started if this is your first Flutter project:
+items: A list of items of type T passed to the Dock.
+builder: A function that builds a widget for each item in the Dock.
+_items: A local copy of the items for internal state management.
+_draggingIndex: An optional integer tracking the index of the item currently being dragged.
+Methods:
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+_buildIconItem: A helper function to build a styled container for each icon.
+_buildDraggableItem: Builds each draggable item, applying a scale and opacity effect if it is being dragged.
+_onItemDropped: Handles reordering the items when an item is dropped into a new position.
